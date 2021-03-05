@@ -1,0 +1,32 @@
+---
+BasedOnStyle: Google
+# BreakBeforeBraces: Allman
+IndentWidth: 4
+ColumnLimit: 100
+AllowShortFunctionsOnASingleLine: Empty
+AccessModifierOffset: -2
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterCaseLabel: true
+    AfterClass: true
+    AfterEnum: true
+    AfterUnion: true
+    AfterStruct: true
+    AfterFunction: true
+    AfterControlStatement: true
+    AfterNamespace: true
+    BeforeElse: true
+    BeforeCatch: true
+    AfterExternBlock: true
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+
+BreakBeforeConceptDeclarations: true
+BreakInheritanceList: BILS_AfterColon
+BreakStringLiterals: true
+CompactNamespaces: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+FixNamespaceComments: true
+IndentCaseLabels: true
+IndentExternBlock: NoIndent
+IndentPPDirectives: PPDIS_AfterHash
