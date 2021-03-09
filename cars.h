@@ -36,4 +36,5 @@ class Car {
   private:
     Wheel wheel[NBR_WHEEL];
     int nbr_door;
+    int id = 0;
 };

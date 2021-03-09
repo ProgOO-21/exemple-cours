@@ -21,12 +21,9 @@ BraceWrapping:
     SplitEmptyFunction: false
     SplitEmptyRecord: false
 
-BreakBeforeConceptDeclarations: true
-BreakInheritanceList: BILS_AfterColon
+BreakInheritanceList: AfterColon
 BreakStringLiterals: true
 CompactNamespaces: false
-EmptyLineBeforeAccessModifier: LogicalBlock
 FixNamespaceComments: true
 IndentCaseLabels: true
-IndentExternBlock: NoIndent
-IndentPPDirectives: PPDIS_AfterHash
+IndentPPDirectives: AfterHash

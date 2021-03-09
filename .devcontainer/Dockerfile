@@ -13,11 +13,13 @@ RUN apt-get update && \
                        python3 \
                        wget \
                        python3-pip \
-                       clang-format 
+                       clang-format-10
 
 ENV LC_ALL=C.UTF-8
 ENV LANG=C.UTF-8
 
 RUN pip3 install baygon==0.2.1
+
+RUN ln -sf /usr/bin/clang-format-10 /usr/bin/clang-format
 
 ADD .bashrc /root/.bashrc

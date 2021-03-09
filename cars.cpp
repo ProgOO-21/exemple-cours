@@ -22,10 +22,9 @@ double Wheel::getPressure() { return pressure; }
 
 
 // Class Car
-Car::Car()
+Car::Car() : nbr_door(4), id(4)
 {
     cout << "La voiture est construite" << endl;
-    nbr_door = 4;
 }
 
 Car::Car(string txt)
