@@ -3,7 +3,8 @@
 #include <iostream>
 using namespace std;
 
-class Wheel {
+class Wheel
+{
   public:
     Wheel();
     ~Wheel();
@@ -16,7 +17,8 @@ class Wheel {
 };
 
 #define NBR_WHEEL 2
-class Car {
+class Car
+{
   public:
     Car();
     Car(string txt);

@@ -1,3 +1,5 @@
-#pragma once
+// Class shape
 
-void forme();
+// Class Square
+
+// Class Hexagon
