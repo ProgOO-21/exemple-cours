@@ -59,14 +59,4 @@ void forme()
 
     square.calculArea();
     square.show();
-
-    Hexagon hex("hex", 6);
-
-    Shape* shape1 = &square;
-    Shape* shape2 = &hex;
-
-    shape1->calculArea();
-
-    square.calculArea();
-    hex.calculArea();
 }
