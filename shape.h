@@ -6,7 +6,7 @@ using namespace std;
 
 void forme();
 
-// entière
+// entier
 enum Color
 {
     Black,
@@ -80,19 +80,6 @@ class Square : public Shape
   public:
     // pas de contructeur par défaut, on oblige paramètre
     Square(string name, int sideLength);
-
-    void calculArea();
-
-  private:
-    int sideLength;
-};
-
-// Class Hexagon
-class Hexagon : public Shape
-{
-  public:
-    // pas de contructeur par défaut, on oblige paramètre
-    Hexagon(string name, int sideLength);
 
     void calculArea();
 

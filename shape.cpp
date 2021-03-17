@@ -43,13 +43,6 @@ void Square::calculArea()
     area = sideLength * sideLength;
 }
 
-
-void Hexagon::calculArea()
-{
-    
-}
-
-
 void forme()
 {
     Screen screen;
