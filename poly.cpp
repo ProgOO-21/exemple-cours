@@ -19,6 +19,7 @@ class Human
         cout << "Mon nom est : " << name << endl;
     }
 
+    private:
     string name;
 };
 
@@ -27,12 +28,19 @@ class Man : public Human
   public:
     Man(string name) : Human(name) {}
 
+    // pas obligatoire
     void speak() override
     {
-        cout << "Je suis un homme" << endl;
+        //Human::speak(); // appelle de la méthode parent
+        cout << "Je suis un homme et je mesure " << height << endl;
     }
 
     double height = 1.2;
+
+    double getHeiht() const
+    {
+        return height;
+    }
 };
 
 class Women : public Human
@@ -40,23 +48,24 @@ class Women : public Human
   public:
     Women(string name) : Human(name) {}
 
-    // Si pas définit, on appelle la méthode parent
-    /*void speak() override
+    void speak()
     {
         cout << "Je suis une femme" << endl;
-    }*/
+    }
 };
 
-void printMan(Man m){
+void printMan(Man& m){
     m.printName();
+    m.speak();
 }
 
-void printInfo(Human& h){
-    // ici on a pas accès au paramètres enfant
+void printName(Human& h){
     h.printName();
-
     h.speak();
+    //h.height; h n'est pas un Man -> pas d'accès sur height
 }
+
+
 
 void poly()
 {
@@ -64,16 +73,28 @@ void poly()
     Man man1("Jean");
     Women women1("Alice");
 
-    //human.printName();
-    //women1.printName();
+    // appelle méthode calsse parente
+    human.printName();
+    man1.printName();
 
+    // appelle direct
+    human.speak();
     man1.speak();
 
-    printInfo(human);
-    // on a le droit car Man est un Human
-    printInfo(man1);
-    printInfo(women1);
-
-    // pour avoir accès au propriété class enfant
+    // appelle fonction
+    printName(human);
+    printName(man1);
     //printMan(man1);
+    printName(women1);
+
+
+    Human* tab[4];
+    tab[0] = &human;
+    tab[1] = &man1;
+    tab[2] = &women1;
+
+    for(int i=0; i<3; i++){
+        tab[i]->speak();
+    }
+
 }
