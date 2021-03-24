@@ -9,6 +9,8 @@ class Human
   public:
     Human(string name) : name(name) {}
     
+    virtual ~Human(){}
+
     virtual void speak()
     {
         cout << "Je suis un humain" << endl;
@@ -106,4 +108,6 @@ void poly()
     tab[2] = new Man("Bob");
 
     pHuman->speak();
+
+    delete pHuman;
 }
