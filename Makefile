@@ -6,7 +6,7 @@
 EXEC=app
 
 CC=g++
-CFLAGS+= -std=c++17 -Wall -g
+CFLAGS+= -std=c++17 -Wall -g -Wno-unused-variable -Wno-unused-but-set-variable
 CFLAGS+= -Iinclude
 LDLIBS:= -lm
 

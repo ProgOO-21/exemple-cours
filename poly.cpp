@@ -97,4 +97,13 @@ void poly()
         tab[i]->speak();
     }
 
+
+    // Instance d'objet
+    Women women = Women("Alice");
+    Women* pWomen = new Women("Alice");
+    Human* pHuman = new Women("Alice");
+
+    tab[2] = new Man("Bob");
+
+    pHuman->speak();
 }
