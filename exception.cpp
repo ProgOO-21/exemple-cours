@@ -7,7 +7,7 @@ using namespace std;
 
 const int ERROR_FLOATING_POINT = 100;
 
-
+// classe pour créer une exception personnalisée
 class MyException : public exception
 {
   public:
@@ -30,6 +30,7 @@ class MyException : public exception
 };
 
 
+// Méthode qui permet de lever une exception de différents types
 int func2(int value){
     if( value == 0 )
     {
@@ -48,6 +49,8 @@ int func2(int value){
 int func1(int value){
 
     int ret;
+    // Pour avoir accès à val dans le bloc try et catch, il faut déclarer
+    // la variable en dehors des deux blocs
     int val;
     try
     {
@@ -67,7 +70,7 @@ int func1(int value){
     //if( ret != 0 ){
     //    return ret;
     //}
-    
+
     int tmp = value * 4;
     ret = func2(tmp);
     //if( ret != 0 ){
