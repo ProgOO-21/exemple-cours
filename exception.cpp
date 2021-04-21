@@ -48,9 +48,9 @@ int func2(int value){
 
 int func1(int value){
 
-    int ret;
     // Pour avoir accès à val dans le bloc try et catch, il faut déclarer
     // la variable en dehors des deux blocs
+    int ret = 45;
     int val;
     try
     {
@@ -58,15 +58,20 @@ int func1(int value){
         val = 12;
         ret = func2(value);
 
+        val = 125;
         // code 1
     }
     catch(MyException& e)
     {
         val = 1;
         cout << "Exc func1 " << endl;
-        throw; // propage l'exception
+        //throw; // propage l'exception
     }
     
+    // attention si une erreur arrive avant la ligne 58, la valeur de val sera fausse
+    cout << "La valeur de val : " << val << endl;
+    cout << "La valeur de ret : " << ret << endl;
+
     //if( ret != 0 ){
     //    return ret;
     //}
