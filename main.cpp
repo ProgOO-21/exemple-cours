@@ -22,6 +22,8 @@ int main() {
 
     exceptions();
 
+    surcharge();
+
     cout << "End" << endl;
     // les destructeurs sont appelés à la sortie de la fonction
 }
