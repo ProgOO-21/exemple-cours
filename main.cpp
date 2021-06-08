@@ -5,6 +5,9 @@
 #include "poly.h"
 #include "exstatic.h"
 #include "main.h"
+#include "template.hpp"
+
+using namespace test_template;
 
 int main() {
     //Car c1;
@@ -23,6 +26,9 @@ int main() {
     exceptions();
 
     surcharge();
+
+    test_template::test();
+    namespace1::test();
 
     cout << "End" << endl;
     // les destructeurs sont appelés à la sortie de la fonction
