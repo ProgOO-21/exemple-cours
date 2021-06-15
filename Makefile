@@ -10,6 +10,8 @@ CFLAGS+= -std=c++17 -Wall -g -Wno-unused-variable -Wno-unused-but-set-variable
 CFLAGS+= -Iinclude
 LDLIBS:= -lm
 
+LDFLAGS:= -lpthread
+
 ODIR:=obj
 
 SRC := $(wildcard *.cpp)

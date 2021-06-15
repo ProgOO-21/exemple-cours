@@ -17,18 +17,20 @@ int main() {
 
     //poly();
 
-    exstatic();
+    //exstatic();
 
-    allocation();
+    //allocation();
 
-    heritage();
+    //heritage();
 
-    exceptions();
+    //exceptions();
 
-    surcharge();
+    //surcharge();
 
-    test_template::test();
-    namespace1::test();
+    //test_template::test();
+    //namespace1::test();
+
+    test_thread();
 
     cout << "End" << endl;
     // les destructeurs sont appelés à la sortie de la fonction
